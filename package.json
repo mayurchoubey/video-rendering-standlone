@@ -1,0 +1,30 @@
+{
+  "name": "remotion-video-renderer",
+  "version": "1.0.0",
+  "description": "Standalone utility for rendering videos using Remotion Lambda",
+  "main": "index.js",
+  "bin": {
+    "render-video": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "node index.js --help"
+  },
+  "keywords": [
+    "remotion",
+    "video",
+    "render",
+    "lambda",
+    "aws"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@remotion/lambda": "4.0.315",
+    "aws-sdk": "^2.1692.0",
+    "dotenv": "^16.4.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

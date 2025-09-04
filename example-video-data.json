@@ -1,0 +1,37 @@
+{
+  "design": {
+    "id": "example-video",
+    "size": {
+      "width": 1080,
+      "height": 1920
+    },
+    "fps": 30,
+    "tracks": [
+      {
+        "id": "main-track",
+        "accepts": ["text", "image", "video", "audio"],
+        "type": "text",
+        "items": ["text-item-1"],
+        "magnetic": false,
+        "static": false
+      }
+    ],
+    "items": [
+      {
+        "id": "text-item-1",
+        "type": "text",
+        "content": "Hello World!",
+        "style": {
+          "fontSize": 48,
+          "color": "#ffffff",
+          "textAlign": "center"
+        },
+        "position": {
+          "x": 540,
+          "y": 960
+        },
+        "duration": 3000
+      }
+    ]
+  }
+}

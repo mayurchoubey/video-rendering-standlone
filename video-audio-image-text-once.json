@@ -1,0 +1,296 @@
+{
+  "design": {
+    "id": "ZuhWctE9XetdgcM",
+    "size": {
+      "width": 1080,
+      "height": 1920
+    },
+    "fps": 30,
+    "tracks": [
+      {
+        "id": "4LFujde8D8jOg1AcCkOCp",
+        "accepts": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "composition",
+          "caption",
+          "template",
+          "customTrack",
+          "customTrack2",
+          "illustration",
+          "custom",
+          "main",
+          "shape",
+          "linealAudioBars",
+          "radialAudioBars",
+          "progressFrame",
+          "progressBar",
+          "rect"
+        ],
+        "type": "audio",
+        "items": [
+          "hD3iBsZ6qUrOAKOE"
+        ],
+        "magnetic": false,
+        "static": false
+      },
+      {
+        "id": "wiHNzMdzNFmuf8A",
+        "items": [
+          "E05E2fuFrITXVJQx"
+        ],
+        "type": "image",
+        "accepts": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "caption",
+          "template"
+        ]
+      },
+      {
+        "id": "oCmqAQcjXffilxsq",
+        "items": [
+          "zl-CRBGw1IU6cnvmqKi75"
+        ],
+        "type": "text",
+        "accepts": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "composition",
+          "caption",
+          "template",
+          "customTrack",
+          "customTrack2",
+          "illustration",
+          "custom",
+          "main",
+          "shape",
+          "linealAudioBars",
+          "radialAudioBars",
+          "progressFrame",
+          "progressBar",
+          "rect"
+        ]
+      },
+      {
+        "id": "9B-ke6Gc-D39jfTJK7AiH",
+        "accepts": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "composition",
+          "caption",
+          "template",
+          "customTrack",
+          "customTrack2",
+          "illustration",
+          "custom",
+          "main",
+          "shape",
+          "linealAudioBars",
+          "radialAudioBars",
+          "progressFrame",
+          "progressBar",
+          "rect"
+        ],
+        "type": "video",
+        "items": [
+          "TAB9ey6kgOzZ9Z2D"
+        ],
+        "magnetic": false,
+        "static": false
+      }
+    ],
+    "trackItemIds": [
+      "TAB9ey6kgOzZ9Z2D",
+      "zl-CRBGw1IU6cnvmqKi75",
+      "E05E2fuFrITXVJQx",
+      "hD3iBsZ6qUrOAKOE"
+    ],
+    "trackItemsMap": {
+      "zl-CRBGw1IU6cnvmqKi75": {
+        "id": "zl-CRBGw1IU6cnvmqKi75",
+        "name": "text",
+        "type": "text",
+        "display": {
+          "from": 0,
+          "to": 5000
+        },
+        "details": {
+          "text": "Heading and some body",
+          "fontSize": 120,
+          "width": 600,
+          "fontUrl": "https://fonts.gstatic.com/s/roboto/v29/KFOjCnqEu92Fr1Mu51S7ABc9AMX6lJBP.ttf",
+          "fontFamily": "Roboto-MediumItalic",
+          "color": "#ffffff",
+          "wordWrap": "break-word",
+          "textAlign": "center",
+          "borderWidth": 0,
+          "borderColor": "#000000",
+          "boxShadow": {
+            "color": "#ffffff",
+            "x": 0,
+            "y": 0,
+            "blur": 0
+          },
+          "fontWeight": "normal",
+          "fontStyle": "normal",
+          "textDecoration": "none",
+          "lineHeight": "normal",
+          "letterSpacing": "normal",
+          "wordSpacing": "normal",
+          "backgroundColor": "transparent",
+          "border": "none",
+          "textShadow": "none",
+          "opacity": 100,
+          "wordBreak": "normal",
+          "WebkitTextStrokeColor": "#ffffff",
+          "WebkitTextStrokeWidth": "0px",
+          "top": "183.578782px",
+          "left": "285.813481px",
+          "textTransform": "none",
+          "transform": "none",
+          "skewX": 0,
+          "skewY": 0,
+          "height": 420
+        },
+        "metadata": {}
+      },
+      "TAB9ey6kgOzZ9Z2D": {
+        "id": "TAB9ey6kgOzZ9Z2D",
+        "details": {
+          "width": 540,
+          "height": 960,
+          "opacity": 100,
+          "src": "https://videos.pexels.com/video-files/6963395/6963395-sd_540_960_25fps.mp4",
+          "volume": 100,
+          "borderRadius": 0,
+          "borderWidth": 0,
+          "borderColor": "#000000",
+          "boxShadow": {
+            "color": "#000000",
+            "x": 0,
+            "y": 0,
+            "blur": 0
+          },
+          "top": "480px",
+          "left": "270px",
+          "transform": "scale(2)",
+          "blur": 0,
+          "brightness": 100,
+          "flipX": false,
+          "flipY": false,
+          "rotate": "0deg",
+          "visibility": "visible"
+        },
+        "metadata": {
+          "previewUrl": "https://images.pexels.com/videos/6963395/pictures/preview-0.jpeg"
+        },
+        "trim": {
+          "from": 0,
+          "to": 7320
+        },
+        "type": "video",
+        "name": "video",
+        "playbackRate": 1,
+        "display": {
+          "from": 1595.7446808510638,
+          "to": 8915.744680851065
+        },
+        "duration": 7320,
+        "isMain": false
+      },
+      "E05E2fuFrITXVJQx": {
+        "id": "E05E2fuFrITXVJQx",
+        "type": "image",
+        "name": "image",
+        "display": {
+          "from": 9335.106382978725,
+          "to": 14335.106382978725
+        },
+        "playbackRate": 1,
+        "details": {
+          "src": "https://images.pexels.com/photos/33152525/pexels-photo-33152525.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+          "width": 868,
+          "height": 1300,
+          "opacity": 100,
+          "transform": "scale(1.2442396313364055)",
+          "border": "none",
+          "borderRadius": 0,
+          "boxShadow": {
+            "color": "#000000",
+            "x": 0,
+            "y": 0,
+            "blur": 0
+          },
+          "top": "310px",
+          "left": "106px",
+          "borderWidth": 0,
+          "borderColor": "#000000",
+          "blur": 0,
+          "brightness": 100,
+          "flipX": false,
+          "flipY": false,
+          "rotate": "0deg",
+          "visibility": "visible"
+        },
+        "metadata": {}
+      },
+      "hD3iBsZ6qUrOAKOE": {
+        "id": "hD3iBsZ6qUrOAKOE",
+        "name": "Dawn of change",
+        "type": "audio",
+        "display": {
+          "from": 0,
+          "to": 14335.106382978725
+        },
+        "trim": {
+          "from": 0,
+          "to": 14335.106382978833
+        },
+        "playbackRate": 1,
+        "details": {
+          "src": "https://cdn.designcombo.dev/audio/Dawn%20of%20change.mp3",
+          "volume": 100
+        },
+        "metadata": {
+          "author": "Roman Senyk"
+        },
+        "duration": 117237.55102040817,
+        "isMain": false
+      }
+    },
+    "transitionIds": [],
+    "transitionsMap": {},
+    "scale": {
+      "index": 7,
+      "unit": 300,
+      "zoom": 0.0033333333333333335,
+      "segments": 5
+    },
+    "duration": 14335.106382978725,
+    "activeIds": [
+      "hD3iBsZ6qUrOAKOE"
+    ],
+    "structure": [],
+    "background": {
+      "type": "color",
+      "value": "transparent"
+    }
+  },
+  "options": {
+    "fps": 30,
+    "size": {
+      "width": 1080,
+      "height": 1920
+    },
+    "format": "mp4"
+  }
+} 
