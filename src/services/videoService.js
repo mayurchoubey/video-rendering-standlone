@@ -46,7 +46,7 @@ async function waitForRenderCompletion(renderId, outputKey,bucketName,outputFile
         }).promise();
         const url = `https://${bucketName}.s3.${config.region}.amazonaws.com/${outputFileName}`;
         console.log(`\n✅ Video file found in S3! Render completed successfully!`);
-        return { status: 'completed',  data: {
+        return { status: 'success',  data: {
           fileURL: url,
           outputKey,
           renderId
