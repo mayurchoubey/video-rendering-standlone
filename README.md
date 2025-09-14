@@ -1,169 +1,98 @@
-# Remotion Video Renderer Utility
+<p align="center">
+  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
+</p>
 
-A standalone utility for rendering videos using Remotion Lambda. This tool allows you to render videos from JSON data files without needing the full Remotion codebase.
+[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
+[circleci-url]: https://circleci.com/gh/nestjs/nest
 
-## Features
+  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+    <p align="center">
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
+<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
+<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
+<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
+<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
+    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
+</p>
+  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
+  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-- 🚀 Render videos using Remotion Lambda
-- 📁 Load video data from JSON files
-- ⏳ Monitor render progress with S3 polling
-- 🔧 Configurable via environment variables
-- 📝 Command-line interface with help
-- 🎬 Support for custom compositions
+## Description
 
-## Installation
+[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-1. Clone or download this utility to your desired location
-2. Install dependencies:
-
-```bash
-cd /Users/mayur/newworkspace/video-render-utility
-npm install
-```
-
-## Configuration
-
-Create a `.env` file in the utility directory with your AWS and Remotion configuration:
-
-```bash
-cp .env.example .env
-```
-
-Then edit `.env` with your settings:
-
-```env
-AWS_REGION=us-east-1
-REMOTION_LAMBDA_FUNCTION=your-lambda-function-name
-REMOTION_SERVER_URL=https://your-remotion-server-url
-REMOTION_BUCKET=your-s3-bucket-name
-```
-
-## Usage
-
-### Basic Usage
+## Project setup
 
 ```bash
-# Render a video from JSON data
-node index.js video-data.json
-
-# Specify output filename
-node index.js video-data.json my-video.mp4
-
-# Use a custom composition
-node index.js --composition MyComposition video-data.json
+$ npm install
 ```
 
-### Command Line Options
-
-- `--composition, -c`: Composition name (default: RenderVideo)
-- `--help, -h`: Show help message
-- `--version, -v`: Show version
-
-### Environment Variables
-
-- `AWS_REGION`: AWS region (default: us-east-1)
-- `REMOTION_LAMBDA_FUNCTION`: Lambda function name
-- `REMOTION_SERVER_URL`: Remotion server URL
-- `REMOTION_BUCKET`: S3 bucket name
-
-## JSON Data Format
-
-The utility expects a JSON file containing video data. The structure should match what your Remotion composition expects. For example:
-
-```json
-{
-  "design": {
-    "id": "unique-id",
-    "size": {
-      "width": 1080,
-      "height": 1920
-    },
-    "fps": 30,
-    "tracks": [
-      {
-        "id": "track-id",
-        "type": "text",
-        "items": ["item-id"]
-      }
-    ]
-  }
-}
-```
-
-## Examples
-
-### Example 1: Basic Video Rendering
+## Compile and run the project
 
 ```bash
-# Create a simple video
-node index.js simple-video.json output.mp4
+# development
+$ npm run start
+
+# watch mode
+$ npm run start:dev
+
+# production mode
+$ npm run start:prod
 ```
 
-### Example 2: Using Environment Variables
+## Run tests
 
 ```bash
-# Set environment variables and render
-REMOTION_LAMBDA_FUNCTION=my-custom-function node index.js data.json
+# unit tests
+$ npm run test
+
+# e2e tests
+$ npm run test:e2e
+
+# test coverage
+$ npm run test:cov
 ```
 
-### Example 3: Custom Composition
+## Deployment
+
+When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+
+If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
 
 ```bash
-# Use a different composition
-node index.js --composition MyCustomComposition video-data.json
+$ npm install -g @nestjs/mau
+$ mau deploy
 ```
 
-## Output
+With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
-The utility will:
+## Resources
 
-1. Load and validate the JSON data
-2. Initiate the render on AWS Lambda
-3. Monitor progress by polling S3
-4. Display the final video URL when complete
+Check out a few resources that may come in handy when working with NestJS:
 
-Example output:
-```
-✅ Video data loaded successfully
-🚀 Initiating render on Lambda...
-✅ Render initiated successfully!
-🆔 Render ID: abc123-def456-ghi789
-⏳ Waiting for render to complete...
-🔍 Checking S3 for output file (attempt 1/120)...
-✅ Video file found in S3! Render completed successfully!
-🎉 Video creation completed successfully!
-📁 Video URL: https://your-bucket.s3.us-east-1.amazonaws.com/output.mp4
-```
+- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
+- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
+- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
+- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
+- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
+- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
+- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
+- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
 
-## Error Handling
+## Support
 
-The utility includes comprehensive error handling:
+Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
-- JSON file validation
-- AWS credential checking
-- Render timeout handling (10 minutes max)
-- S3 polling with retry logic
+## Stay in touch
 
-## Requirements
-
-- Node.js 14.0.0 or higher
-- Valid AWS credentials configured
-- Access to the specified Remotion Lambda function
-- Valid JSON data file
-
-## Troubleshooting
-
-### Common Issues
-
-1. **AWS Credentials**: Ensure your AWS credentials are properly configured
-2. **Lambda Function**: Verify the Lambda function name and region are correct
-3. **JSON Format**: Check that your JSON file is valid and matches expected structure
-4. **Permissions**: Ensure you have S3 read/write permissions
-
-### Debug Mode
-
-For more detailed logging, you can modify the script to add additional console.log statements or use a logging library.
+- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
+- Website - [https://nestjs.com](https://nestjs.com/)
+- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
-MIT
+Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
