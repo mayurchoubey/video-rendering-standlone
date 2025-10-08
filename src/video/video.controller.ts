@@ -1,10 +1,10 @@
-import { Controller, Get, Post, Body, Param  } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param } from '@nestjs/common';
 import { VideoService } from './video.service';
 import { CreateVideoDto } from './dto/create-video.dto';
 
 @Controller('video')
 export class VideoController {
-    constructor(private readonly videoService: VideoService) {}
+    constructor(private readonly videoService: VideoService) { }
     @Get()
     findAll() {
         return this.videoService.findAll();  // GET /video
@@ -18,17 +18,25 @@ export class VideoController {
     @Post("generate")
     async create(@Body() reqBody: any) {
         console.log(reqBody);
-        const { videoData, outputFileName }  = reqBody;
-        const newVideo:any = await this.videoService.generate(videoData, outputFileName);
-        if(newVideo?.status === "success"){
-            return {statusCode: 201, ...newVideo}
-         } else {
-            return {statusCode: 500, ...newVideo}
-        }         
+        let outputFileName = "", videoData = null;
+        if (reqBody?.outputFileName) {
+            outputFileName = reqBody?.outputFileName;
+            videoData = reqBody?.videoData;
+        } else {
+            const randId = Math.floor(Math.random() * 9999) + 1;
+            outputFileName = `demo-vid-${randId}.mp4`;
+            videoData = reqBody;
+        }
+        const newVideo: any = await this.videoService.generate(videoData, outputFileName);
+        if (newVideo?.status === "success") {
+            return { statusCode: 201, ...newVideo }
+        } else {
+            return { statusCode: 500, ...newVideo }
+        }
     }
     // @Post()
     // create(@Body() createVideoDto: CreateVideoDto) {
     //     return this.videoService.create(createVideoDto);  // POST /video
     // }
-    
+
 }

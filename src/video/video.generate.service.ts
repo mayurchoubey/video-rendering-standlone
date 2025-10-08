@@ -16,9 +16,9 @@ import dotenv from "dotenv";
 dotenv.config();
 const config = {
   region:  "us-east-1",
-  lambdaFunction:  "remotion-render-4-0-315-mem2048mb-disk2048mb-240sec",
-  serverUrl: "https://remotionlambda-useast1-3rne5v73bs.s3.us-east-1.amazonaws.com/sites/dev/index.html",
-  bucket: "remotionlambda-useast1-3rne5v73bs"
+  lambdaFunction:  "remotion-render-4-0-315-mem2048mb-disk2048mb-480sec",
+  serverUrl: "https://remotionlambda-useast1-ne286vv941.s3.us-east-1.amazonaws.com/sites/dev/index.html",
+  bucket: "remotionlambda-useast1-ne286vv941"
 };
 
 async function waitForRenderCompletion(renderId, outputKey,bucketName,outputFileName) {
